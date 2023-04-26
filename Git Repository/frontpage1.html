@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Text animation</title>
+    <link rel="stylesheet" href="frontpage1.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+
+<div id="logo">
+    <a href="frontpagenavbar.html"><img src="https://clipground.com/images/three-lines-logo-3.png" onclick="logo()"></a>
+</div>  
+<div class="container">
+    <div class=text>
+    <!-- <span class="first-text">I'm a</span> -->
+    <span class="sec-text">Freelancer</span>
+</div>
+</div>
+<div id="page"><link rel="stylesheet" href="frontpagenaavbar.html"></div>
+    
+</body>
+<script>
+    const text=document.querySelector(".sec-text");
+    const textLoad =()=>{
+        setTimeout(()=>{
+        text.textContent="Software Engineer says.....";
+    },0);
+    setTimeout(()=>{
+        text.textContent="Talk is cheap";
+    },4000);
+    setTimeout(()=>{
+        text.textContent="Show me the code";
+    },8000);  
+    }
+    textLoad();
+    setInterval(textLoad,12000);
+    function logo(){
+    console.log("Mouseup when we clicked on text")
+
+    }
+        
+
+</script>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<!-- <script src="location.js"></script> -->
+<!-- <script src="loactemp.js"></script> -->
+
+<style>
+    body{
+        background-color: black;
+    }
+    .fom{
+        margin-top: 100px;
+        margin-left: 200px;
+    }
+    .name{
+      background-color: black;
+      color: white;
+      border-width: 3px;
+      border-bottom-color: white;  
+      height: 25px;
+      width:330px;
+      margin-bottom: 50px;
+      font-size: 17px;
+      border-top-color: black; 
+      border-left-color: black;
+      border-right-color: black;  
+    }
+    .email{
+      background-color: black;
+      color: white;
+      border-width: 3px;
+      border-bottom-color: white;  
+      height: 25px;
+      width:330px;
+      margin-bottom: 50px;
+      border-top-color: black; 
+      border-left-color: black;
+      border-right-color: black;  
+    }
+    .textaear{
+        background-color: black;
+      color: white;
+      border-width: 3px;
+      border-bottom-color: white;  
+      height: 200px;
+      width:330px;
+      margin-bottom: 50px;
+      border-top-color: black; 
+      border-left-color: black;
+      border-right-color: black;  
+      font-size: 17px;
+    }
+    .submit{
+       height: 30px;
+       width: 80px;
+       font-size: 17px;  
+       margin-left: 120px;   
+       margin-bottom: 150px;  
+    }
+
+    .map{
+        float: right;
+        margin-right: 50px;
+    }
+    #add{
+        color: white;
+        text-align: center;
+        margin-top: 50px;
+        font-size: 20px;
+    }
+    #para{
+        color: white;
+        font-size: 15px;
+        margin-top: 70px;
+        text-align: center;
+    }
+    #logo{
+    margin-left: 5px;
+    margin-top: 5px;
+    height: 30px;
+    width:30px;
+  }
+ #logo img{
+  height:30px;
+  width:30px;
+  border-radius: 1px;
+}
+
+</style>
+
+<body ontouch="touchstart(event)"
+ontouchmove="touchmove(event)"
+ontouchend="touchend()">
+
+
+  <div id="logo">
+    <a href="frontpagenavbar.html"><img src="https://clipground.com/images/three-lines-logo-3.png" onclick="logo()"></a>
+</div>  
+</body>
+
+
+<!-- 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">AmStaR</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="frontpage1.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Aboutpage.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="work.html">Work</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="ourclients.html">Our Clients</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Contactus.html">Contact US</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Servicepage.html">Service</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Testimonials.html">Testomonials</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="location.html">Location</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li> -->
+            <!-- </ul> -->
+            <!-- <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form> -->
+          <!-- </div>
+        </div>
+      </nav> --> 
+    <form class="fom">
+            <input class =" name" id="name" class="form-control" type="text" placeholder="Name">
+            <p class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3510.5924159607926!2d76.8854561842515!3d28.371169692520475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d3e5a930fba85%3A0xa81ba684ac02550f!2sIndo%20Autotech%20Ltd%20(Unit-III)!5e0!3m2!1sen!2sin!4v1681970176600!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </p><br>
+        
+            <input class="email " id="mail"class="form-control" type="email"name="email"placeholder="Email"><br>
+            <!-- <textarea class="textaear"id="textar" class="form-control" placeholder="Message"></textarea><br> -->
+            <input  class="submit"  id="submit"class="btn btn-primary"class="form-control" type="button" value="Submit">
+            <!-- <input  class="veiw data"  id="veiw data"class="form-control" type="button" onclick="veiwdata()" value="Veiw Data"> -->
+    </form>
+    <div id="add">
+        Indo Autotech Ltd (Unit-III)
+        132, Sector 8, Imt Manesar, Gurugram, Haryana 122051<br>Indo Autotech Limited – II
+        Plot No. 261,
+        Sector-24,
+        Faridabad Haryana 121005
+        India
+        https://indoautotech.com</div>
+        
+        <p id="para">@ 2023 Indo Autotech</p>
+   
+
+
+        <div id="item" class="my-4">             
+            <h2> Data</h2>
+            <table class="table">
+              <thead>  
+                <tr>
+                  <th scope="col">SNo</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Email id</th>
+                  <!-- <th scope="col">Message from customer</th> -->
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody id="tableBody">
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Kashish</td>
+                  <td>Kashishkurra@gmail.com</td>
+                  <!-- <td>Can we schedule some time for a meeting</td> -->
+                  <td><button class="btn btn-primary">Delete</button></td>
+                </tr>
+              </tbody>
+            </table>
+            <button  id="clear" class="btn btn-primary" onclick="clearstorage()">Clear List</button>
+          </div> 
+    </div>
+    </body>
+    
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+<script src="location.js"></script>
+<script>
+  function getAndupdate(){
+
+// add=document.getElementById("add");
+// add.addEventListener("click", ()=>{
+    console.log("updating list.....");
+    tit=document.getElementById('name').value;
+    desc=document.getElementById('mail').value;
+    // textar=document.getElementById('textar').value;
+    if(localStorage.getItem('itemsJson')==null){
+      itemJsonArray = [];
+      itemJsonArray.push([tit,desc]);
+      localStorage.setItem('itemsJson',JSON.stringify(itemJsonArray))
+    }     
+    else{ 
+      itemJsonArrayStr=localStorage.getItem('itemsJson')
+      itemJsonArray=JSON.parse(itemJsonArrayStr);
+      itemJsonArray.push([tit,desc]);
+      localStorage.setItem('itemsJson',JSON.stringify(itemJsonArray))
+    }
+  update();
+  }
+
+    function update(){
+      if(localStorage.getItem('itemsJson')==null){
+      itemJsonArray = [];
+      localStorage.setItem('itemsJson',JSON.stringify(itemJsonArray))
+    }  
+    else{ 
+      itemJsonArrayStr=localStorage.getItem('itemsJson')
+      itemJsonArray=JSON.parse(itemJsonArrayStr);
+    }  
+    // Populate the table
+    let tableBody = document.getElementById("tableBody");
+    let str= "";
+    itemJsonArray.forEach((element,index )=> {
+      str+=`
+      <tr>
+        <th scope="row">${index + 1}</th>
+                <td>${element[0]}</td>
+                <td>${element[1]}</td>
+                <td><button class="btn btn-primary" onclick="deleted(${index})">Delete</button></td>
+              </tr>`;
+    });
+    tableBody.innerHTML =str;
+}
+add = document.getElementById("submit");
+add.addEventListener("click",getAndupdate);
+update();
+function deleted(itemIndex){
+  var start=prompt("Would you like to clear all the data....? y,n")
+    
+    if(start==="y"){
+      var request=prompt("Please enter the password")
+        if(request==="Location@"){
+          console.log("Delete",itemIndex);  
+          itemJsonArrayStr=localStorage.getItem('itemsJson')
+          itemJsonArray=JSON.parse(itemJsonArrayStr);
+              // Delete Item Index element from array
+        itemJsonArray.splice(itemIndex,1);
+        localStorage.setItem('itemsJson',JSON.stringify(itemJsonArray));
+        update();
+        }
+        else{
+          alert("Please enter the correct password")
+      }}
+   else (start==='n');{
+      alert("Thank You")
+   }}
+   function clearstorage(){
+    var start=prompt("Would you like to clear all the data....? y,n")
+    
+      if(start==="y"){
+        var request=prompt("Please enter the password")
+          if(request==="Location@"){
+            console.log("clearing the storage")
+            localStorage.clear();
+            update();
+            }
+          else{
+            alert("Please enter the correct password")
+        }}
+     else (start==='n');{
+        alert("Thank You")
+     }
+     } 
+
+</script>
+
+</html>
